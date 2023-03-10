@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORRORHAUNTED</title>
+    <style>
+         body {
+            background: url(img\/Bat\ Ghost\ by\ HOLLIDAY.gif) no-repeat;  
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            margin: 0px;
+        } 
+        .navbar {
+            background-color: rgba(11, 45, 68, 0.637);
+            width: 100%;
+            margin: 0%;
+            transition: all ease 0.5s;
+        }
+        .navbar ul {
+            text-align: center;
+            margin: 0px;
+        }
+        .navbar li {
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar li a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(189, 117, 10);
+            padding-left: 10px;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: 550;
+            font-size: 25px;  
+        }
+        .navbar li a:hover {
+    c        background-color: rgba(70, 96, 105, 0.76);
+        }
+        section h2{
+            font-size: 85px;
+            font-weight: 200;
+            margin-top: 200px;
+        }
+        .change_content:after{
+            content: "";
+            animation: changetext 5s infinite ease;
+            color:rgb(250, 250, 250); 
+        }
+        .change_content :after{
+            content: " ";
+            animation: changetext 5s infinite linear;
+        }
+        @keyframes changetext{
+            33%{content: "Welcome To Hell";}
+            66%{content: "Visit At Your Own Risk";}
+            100%{content: "You Should Not Come Here";}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><img src="img/icons8-skull-50.png" width="30" height="30" /> <a href="#">Home</a></li>
+            <li><img src="img/icons8-globe-earth-64.png" width="35" height="35"><a href="places.html">Places</a></li>
+            <li><img src="img/icons8-activity-history-50.png" width="30" height="30"> <a href="s.html">Stories</a></li>
+            <li><img src="img/icons8-video-26.png" width="25" height="25"> <a href="videos.html">Videos</a></li>
+            <li> <img src="img/icons8-more-info-50.png" width="30" height="30"><a href="aboutUs.html"> About us</a></li>
+        </ul>
+    </nav>
+    <audio src="img/WhatsApp Audio 2021-03-22 at 10.33.14 AM.mpeg" autoplay="true" style='display:none' loop></audio>
+    <header>
+    <center>
+        <section style="font-size: 100px;">
+            <h2><span class="change_content"> </span></h2>
+        </section>
+    </center>
+</header>
+   
+</body>
+
+</html>

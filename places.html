@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <style>
+        body {
+            background: url(img/IMG_20200103_184912.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            margin: 0px;
+        }
+        .navbar {
+            background-color: rgba(78, 10, 10, 0.657);
+            width: 100%;
+            margin: 0%;
+        }
+        .navbar ul {
+            text-align: center;
+            margin: 0px;
+        }
+        .navbar li {
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar li a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(189, 117, 10);
+            padding-left: 10px;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: 550;
+            font-size: 25px;
+        }
+        .navbar li a:hover {
+            background-color: rgba(33, 35, 36, 0.609);
+        }
+        .search{
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            margin-top: 80px;
+            font-size: 30px;
+        }
+        .search li a{
+            font-family:'Times New Roman', Times, serif ;
+            color:rgb(255, 255, 255);
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: 100;
+            font-size: 25px;
+            text-align: center;
+        }
+        .search li:hover{
+            background-color:rgba(8, 8, 8, 0.335);
+        }
+        .search li{
+            margin-top:0;
+            width: 100%;
+            margin: auto;
+            background-color: rgba(34, 33, 33, 0.602);
+            border:1px solid rgb(70, 67, 67);
+            list-style: none;
+        }
+        .search ul{
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+        #myInput{
+            height: 30px;
+            width: 100%;
+        }
+        .links img{
+            width: 200px;
+            height: 200px;
+            margin-left: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><img src="img/icons8-skull-50.png" width="30" height="30" /> <a href="horror.html">Home</a>
+            </li>
+            <li><img src="img/icons8-globe-earth-64.png" width="35" height="35"  ><a href="#">Places</a></li>
+            <li><img src="img/icons8-activity-history-50.png" width="30" height="30"> <a href="s.html">Stories</a></li>
+
+            <li> <img src="img/icons8-video-26.png" width="25" height="25"><a href="videos.html">Videos</a></li>
+            <li> <img src="img/icons8-more-info-50.png" width="30" height="30"><a href="aboutUs.html"> About Us</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" id="myInput" placeholder="Search Horror Places" onkeyup="searchPlaces()">
+        <ul id="myUL">
+            <li><a href="Bhangarh.html">Bhangarh</a></li>
+            <li><a href="Brazil Joelma Building.html">Brazil Joelma Building</a></li>
+            <li><a href="Australia Beechworth.Asylum.html">Australia Beechworth.Asylum</a></li>
+            <li><a href="egypt.html">Egypt Valley of the Kings</a></li>
+            <li><a href="Moscow Kremlin.html">Moscow Kremlin</a></li>
+        </ul>
+        <script>
+            const searchPlaces = () =>{
+                let filter = document.getElementById('myInput').value.toUpperCase();
+                let ul = document.getElementById('myUL');
+                let li = ul.getElementsByTagName('li');
+                for(var i=0; i<li.length;i++)
+                {
+                    let a =li[i].getElementsByTagName('a')[0];
+                    let textValue = a.textContent || a.innerHTML;
+                    if(textValue.toUpperCase().indexOf(filter)>-1)
+                    {
+                        if(filter!="")
+                        {
+                            ul.style.display='block';
+                            li.style.display='';
+                        }
+                        else{
+                            ul.style.display='none';
+                        }
+                    }
+                    else{
+                        li[i].style.display='none';
+                    }
+                }
+            }
+        </script>
+    </div>
+    <audio src="img/places.mp3" autoplay="true" style='display:none' loop></audio>
+</body>
+</html>
